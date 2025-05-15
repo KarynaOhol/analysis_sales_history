@@ -137,7 +137,7 @@ WITH yearly_sales AS (SELECT s.cust_id,
 
 -- Step 3: Find customers who ranked in top 300 for all three years
      consistent_top_customers AS (SELECT yrc.cust_id,
-                                         yrc.channel_id
+                                         yrc.channel_id!
                                   FROM yearly_ranked_customers yrc
                                   WHERE yrc.yearly_rank <= 300
                                   GROUP BY yrc.cust_id, yrc.channel_id
